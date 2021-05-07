@@ -1,0 +1,38 @@
+{
+  "name": "sdlang",
+  "version": "0.1.0",
+  "description": "An SDLang parser for JS/TS.",
+  "main": "./dist/umd/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/typings/index.d.ts",
+  "scripts": {
+    "test": "npx mocha -r ts-node/register -r esm tests/**/*",
+    "build": "npx webpack",
+    "prebuild": "npx tsc",
+    "lint": "npx eslint . --ext .ts"
+  },
+  "keywords": [
+    "sdlang",
+    "parser",
+    "js",
+    "ts"
+  ],
+  "author": "Bradley Chatha",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@types/chai": "^4.2.17",
+    "@types/mocha": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.3.4",
+    "eslint": "^7.25.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
