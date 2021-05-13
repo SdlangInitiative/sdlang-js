@@ -33,12 +33,15 @@ export class SdlTag extends SdlNamedBased
         this._values = v;
     }
 
-    constructor(qualifiedName: string)
+    constructor(
+        qualifiedName: string, 
+        init?: { children?: SdlTag[], attributes?: Record<string, SdlAttribute>, values?: SdlValue[] }
+    )
     {
         super(qualifiedName);
-        this._children = [];
-        this._attributes = {};
-        this._values = [];
+        this._children = init?.children ?? [];
+        this._values = init?.values ?? [];
+        this._attributes = init?.attributes ?? {};
     }
 
     public hasValueAt(valueIndex: number)  : boolean { return valueIndex < this.values.length; }
