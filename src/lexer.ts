@@ -3,6 +3,10 @@
 // It also keeps track of line info, since the focus is more on usability rather than speed in TS/JS land.
 // It also TypeScriptifies a few things.
 
+import { AstSdlTokenVisitor } from "./ast_visitor";
+import { SdlTag } from "./tag";
+import { parseAndVisit } from "./pusher";
+
 export enum SdlTokenType
 {
     Failsafe,
@@ -156,6 +160,13 @@ export class SdlReader
         }
 
         return array;
+    }
+
+    public toAst() : SdlTag
+    {
+        const visitor = new AstSdlTokenVisitor();
+        parseAndVisit(this.clone(), visitor);
+        return visitor.rootNode;
     }
 
     private readImpl() : SdlToken

@@ -1,4 +1,5 @@
-import { SdlReader, SdlValue, SdlTokenType } from "./index";
+import { SdlValue} from "./value";
+import { SdlReader, SdlTokenType } from "./lexer";
 
 export interface ISdlTokenVisitor
 {
