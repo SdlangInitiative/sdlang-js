@@ -1,0 +1,54 @@
+import { SdlValue, SdlAttribute, SdlTimeSpan } from "./index";
+import { SdlNamedBased } from "./named";
+export declare class SdlTag extends SdlNamedBased {
+    private _children;
+    get children(): SdlTag[];
+    set children(v: SdlTag[]);
+    private _attributes;
+    get attributes(): Record<string, SdlAttribute>;
+    set attributes(v: Record<string, SdlAttribute>);
+    private _values;
+    get values(): SdlValue[];
+    set values(v: SdlValue[]);
+    constructor(qualifiedName: string, init?: {
+        children?: SdlTag[];
+        attributes?: Record<string, SdlAttribute>;
+        values?: SdlValue[];
+    });
+    hasValueAt(valueIndex: number): boolean;
+    hasAttributeCalled(name: string): boolean;
+    hasChildAt(childIndex: number): boolean;
+    hasChildCalled(name: string): boolean;
+    getChildrenCalled(name: string): SdlTag[];
+    getValue(valueIndex: number): SdlValue;
+    getValueNumber(valueIndex: number): number;
+    getValueBoolean(valueIndex: number): boolean;
+    getValueBinary(valueIndex: number): string;
+    getValueString(valueIndex: number): string;
+    getValueDateTime(valueIndex: number): Date;
+    getValueTimeSpan(valueIndex: number): SdlTimeSpan;
+    getValueOrDefault(valueIndex: number, defaultValue?: SdlValue | null): SdlValue | null;
+    getValueNumberOrDefault(valueIndex: number, defaultValue?: number): number;
+    getValueBooleanOrDefault(valueIndex: number, defaultValue?: boolean): boolean;
+    getValueBinaryOrDefault(valueIndex: number, defaultValue?: string | null): string | null;
+    getValueStringOrDefault(valueIndex: number, defaultValue?: string): string;
+    getValueDateTimeOrDefault(valueIndex: number, defaultValue?: Date | null): Date | null;
+    getValueTimeSpanOrDefault(valueIndex: number, defaultValue?: SdlTimeSpan | null): SdlTimeSpan | null;
+    getAttribute(attribName: string): SdlAttribute;
+    getAttributeValue(attribName: string): SdlValue;
+    getAttributeNumber(attribName: string): number;
+    getAttributeBoolean(attribName: string): boolean;
+    getAttributeBinary(attribName: string): string;
+    getAttributeString(attribName: string): string;
+    getAttributeDateTime(attribName: string): Date;
+    getAttributeTimeSpan(attribName: string): SdlTimeSpan;
+    getAttributeValueOrDefault(attribName: string, defaultValue?: SdlValue | null): SdlValue | null;
+    getAttributeNumberOrDefault(attribName: string, defaultValue?: number): number;
+    getAttributeBooleanOrDefault(attribName: string, defaultValue?: boolean): boolean;
+    getAttributeBinaryOrDefault(attribName: string, defaultValue?: string | null): string | null;
+    getAttributeStringOrDefault(attribName: string, defaultValue?: string): string;
+    getAttributeDateTimeOrDefault(attribName: string, defaultValue?: Date | null): Date | null;
+    getAttributeTimeSpanOrDefault(attribName: string, defaultValue?: SdlTimeSpan | null): SdlTimeSpan | null;
+    toString(isRootNode?: boolean, _indent?: number): string;
+}
+//# sourceMappingURL=tag.d.ts.map
