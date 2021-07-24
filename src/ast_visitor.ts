@@ -12,6 +12,7 @@ export class AstSdlTokenVisitor implements ISdlTokenVisitor
     constructor()
     {
         this._parentStack = [];
+        this._parentStack.push(new SdlTag("root"));
         this._currentNode = null;
     }
 
