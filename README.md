@@ -1,5 +1,7 @@
 # Overview
 
+MESSAGE: I'm so sorry it was broken for that long lmfao, I wonder why the tests were passing fine.
+
 This is the official TS/JS port of [SdlangSharp](https://github.com/BradleyChatha/SdlangSharp) which aims to behave and keep as close to the API
 of SdlangSharp as possible.
 
@@ -78,16 +80,20 @@ To preface, all function and variable names have been turned into camel-case, si
 If there are any differences between the two versions that are not listed here, feel free to open an issue about it.
 It could be a bug, or I just forgot to put it here. Doesn't hurt to make sure >x3.
 
-* [SdlReader has a different API](#sdlreader-has-a-different-api)
-* [SdlReader will always escape double-quoted strings](#sdlreader-will-always-escape-double-quoted-strings)
-* [SdlToken has line information](#sdltoken-has-line-information)
-* [ISdlTokenVisitor is different](#isdltokenvisitor-is-different)
-* [SdlReader uses different parsing algorithms](#sdlreader-uses-different-parsing-algorithms)
-* [Integer and Float have been merged into Number](#integer-and-float-have-been-merged-into-number)
-* [SdlAstToTextConverter and SdlHelper have been removed](#sdlasttotextconverter-and-sdlhelper-have-been-removed)
-* [SdlAttribute.value is no longer nullable](#sdlattributevalue-is-no-longer-nullable)
-* [SdlValue has static functions for constructors](#sdlvalue-has-static-functions-for-constructors)
-* [SdlTag has an extra optional parameter](#sdltag-has-an-extra-optional-parameter)
+- [Overview](#overview)
+- [Documentation](#documentation)
+- [Differences](#differences)
+  - [SdlReader has a different API](#sdlreader-has-a-different-api)
+  - [SdlReader will always escape double-quoted strings](#sdlreader-will-always-escape-double-quoted-strings)
+  - [SdlReader uses different parsing algorithms](#sdlreader-uses-different-parsing-algorithms)
+  - [SdlToken has line information](#sdltoken-has-line-information)
+  - [ISdlTokenVisitor is different](#isdltokenvisitor-is-different)
+  - [Integer and Float have been merged into Number](#integer-and-float-have-been-merged-into-number)
+  - [SdlAstToTextConverter and SdlHelper have been removed](#sdlasttotextconverter-and-sdlhelper-have-been-removed)
+  - [SdlAttribute.value is no longer nullable](#sdlattributevalue-is-no-longer-nullable)
+  - [SdlValue has static functions for constructors](#sdlvalue-has-static-functions-for-constructors)
+  - [SdlTag has an extra optional parameter](#sdltag-has-an-extra-optional-parameter)
+- [Warning](#warning)
 
 ## SdlReader has a different API
 
